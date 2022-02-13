@@ -1,20 +1,6 @@
-# flutter_dev_practice
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+## Not a good practice on Table Widget.
+### The code is  to understand the concept
+### Concepts : Table , TableRow, Container(Margin, Padding)
 <p align="center">
-  <img src="Screenshot_1644745681.png" width="280" height="420" title="hover text">
+  <img src="screenshot.png" width="380" title="hover text">
 </p>

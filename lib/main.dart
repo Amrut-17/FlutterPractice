@@ -15,51 +15,102 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Development",
+            "App Bar",
             style: TextStyle(
               fontWeight: FontWeight.bold,
             ),
           ),
         ),
         body: Material(
-          child: Table(
-            border: TableBorder.all(),
-            children: [
-              TableRow(
-                children: [
-                  Text(
-                    "First Name",
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
-                      fontSize: 20.0,
+          child: Container(
+            margin: EdgeInsets.all(15),
+            padding: EdgeInsets.all(10),
+            child: Table(
+              border: TableBorder.all(),
+              children: [
+                TableRow(
+                  children: [
+                    Text(
+                      "First Name",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "Middle Name",
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
-                      fontSize: 20.0,
+                    Text(
+                      "Middle Name",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "Last Name",
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
-                      fontSize: 20.0,
+                    Text(
+                      "Last Name",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    Text(
+                      "ABC",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      "DEF",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      "GHI",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    Text(
+                      "RST",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      "UVW",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      "XYZ",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

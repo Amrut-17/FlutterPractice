@@ -22,16 +22,44 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Material(
-          child: Center(
-            child: Text(
-              "Hello Flutter",
-              style: TextStyle(
-                color: Colors.amberAccent,
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.bold,
-                fontSize: 50.0,
+          child: Table(
+            border: TableBorder.all(),
+            children: [
+              TableRow(
+                children: [
+                  Text(
+                    "First Name",
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      fontSize: 20.0,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                    "Middle Name",
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      fontSize: 20.0,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                    "Last Name",
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      fontSize: 20.0,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
-            ),
+            ],
           ),
         ),
       ),

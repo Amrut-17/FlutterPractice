@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Amruts First App",
+            "Development",
             style: TextStyle(
               fontWeight: FontWeight.bold,
             ),

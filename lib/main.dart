@@ -1,150 +1,59 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dev_practice/screens/sample_pages.dart';
 
 void main() {
   runApp(
-    MaterialApp(
-      title: "StatefulWidget_Concept",
-      home: HomeScreen(),
-    ),
+    BottomNavBar(),
   );
 }
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-
+class BottomNavBar extends StatelessWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Bottom NavBar",
+      home: BottomMenu(),
+    );
+  }
 }
 
-class _HomeScreenState extends State<HomeScreen> {
-  String fName = "";
+class BottomMenu extends StatefulWidget {
+  @override
+  _BottomMenuState createState() => _BottomMenuState();
+}
+
+class _BottomMenuState extends State<BottomMenu> {
+  var _page = [HomePage(), AboutPage(), ContactPage()];
+  int _selectedItem = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Form using StatefulWidget",
+        backgroundColor: Colors.amber,
+        title: const Text(
+          "Bottom NavBar App",
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
-      body: Container(
-        margin: EdgeInsets.all(20.0),
-        padding: EdgeInsets.all(20.0),
-        child: Column(
-          children: <Widget>[
-            TextField(
-              onSubmitted: (String firstName) {
-                setState(() {
-                  fName = firstName;
-                });
-              },
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Text(
-                "Hello !! \tI am $fName ",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 255, 0, 64),
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30.0,
-                ),
-              ),
-            ),
-          ],
-        ),
+      body: Center(
+        child: _page[_selectedItem],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home",),
+          BottomNavigationBarItem(icon: Icon(Icons.info), label: "About"),
+          BottomNavigationBarItem(icon: Icon(Icons.call), label: "Contact Us"),
+        ],
+        currentIndex: _selectedItem,
+        onTap: (setValue) {
+          setState(() {
+            _selectedItem = setValue;
+          });
+        },
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import 'package:flutter/material.dart';
-
-// void main() {
-//   runApp(
-//     MaterialApp(
-//       title: "Form Using StatefullWidget",
-//       home: SimpleForm(),
-//     ),
-//   );
-// }
-
-// class SimpleForm extends StatefulWidget {
-//   @override
-//   _SimpleFormState createState() => _SimpleFormState();
-// }
-
-// class _SimpleFormState extends State<SimpleForm> {
-//   String name = "";
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text(
-//           "Form using StatefulWidget",
-//         ),
-//       ),
-//       body: Container(
-//         margin: EdgeInsets.all(20.0),
-//         padding: EdgeInsets.all(10.0),
-//         child: Column(
-//           children: <Widget>[
-//             TextField(
-//               onSubmitted: (String username) {
-//                 setState(() {
-//                   name = username;
-//                 });
-//               },
-//             ),
-//             Padding(
-//               padding: const EdgeInsets.all(10.0),
-//               child: Text(
-//                 "Hello !! \nI am $name",
-//                 style: TextStyle(
-//                   color: Colors.amberAccent,
-//                   fontSize: 30.0,
-//                   fontStyle: FontStyle.italic,
-//                   fontWeight: FontWeight.bold,
-//                 ),
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }

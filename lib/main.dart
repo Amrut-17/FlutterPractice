@@ -3,56 +3,55 @@ import 'package:flutter_dev_practice/screens/sample_pages.dart';
 
 void main() {
   runApp(
-    BottomNavBar(),
+    HomeScreen(),
   );
 }
 
-class BottomNavBar extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Bottom NavBar",
-      home: BottomMenu(),
+      title: "Page Navigation",
+      home: NavigationTest(),
     );
   }
 }
 
-class BottomMenu extends StatefulWidget {
+class NavigationTest extends StatefulWidget {
   @override
-  _BottomMenuState createState() => _BottomMenuState();
+  _NavigationTestState createState() => _NavigationTestState();
 }
 
-class _BottomMenuState extends State<BottomMenu> {
-  var _page = [HomePage(), AboutPage(), ContactPage()];
-  int _selectedItem = 0;
+class _NavigationTestState extends State<NavigationTest> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.amber,
-        title: const Text(
-          "Bottom NavBar App",
+        backgroundColor: Colors.amber.shade500,
+        title: Text(
+          "Navigation Test",
           style: TextStyle(
+            fontStyle: FontStyle.italic,
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
       body: Center(
-        child: _page[_selectedItem],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home",),
-          BottomNavigationBarItem(icon: Icon(Icons.info), label: "About"),
-          BottomNavigationBarItem(icon: Icon(Icons.call), label: "Contact Us"),
-        ],
-        currentIndex: _selectedItem,
-        onTap: (setValue) {
-          setState(() {
-            _selectedItem = setValue;
-          });
-        },
+        child: RaisedButton(
+          child: Text(
+            "Click Here",
+            style: TextStyle(
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                fontSize: 20.0),
+          ),
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => AppPages()));
+          },
+        ),
       ),
     );
   }

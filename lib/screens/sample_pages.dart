@@ -1,53 +1,30 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class AppPages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-          "This is Home Page",
-          style: TextStyle(
-            fontSize: 30.0,
-            fontStyle: FontStyle.italic,
-            color: Colors.red,
-          ),
-        ),
+      appBar: AppBar(
+        title: Text("Redirected on ...."),
       ),
-    );
-  }
-}
-
-class AboutPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
       body: Center(
-        child: Text(
-          "This is About Page",
-          style: TextStyle(
-            fontSize: 30.0,
-            fontStyle: FontStyle.italic,
-            color: Colors.red,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class ContactPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          "This is Contact Page",
-          style: TextStyle(
-            fontSize: 30.0,
-            fontStyle: FontStyle.italic,
-            color: Colors.red,
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              "First Page",
+              style: TextStyle(
+                color: Colors.orange,
+                fontSize: 30.0,
+              ),
+            ),
+            FloatingActionButton(
+              child: Icon(Icons.arrow_back_rounded),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            )
+          ],
         ),
       ),
     );

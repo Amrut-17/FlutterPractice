@@ -15,5 +15,5 @@
 <img src="ss4.png"  width="320" height="480" title="hover text">
 
 
-<img src="ss5.png"  width="320" height="480" title="hover text">
+<img src="s5.png"  width="320" height="480" title="hover text">
 

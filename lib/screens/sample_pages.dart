@@ -1,31 +1,28 @@
 import 'package:flutter/material.dart';
 
-class AppPages extends StatelessWidget {
+class SettingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Redirected on ...."),
+        title: Text("Settings"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              "First Page",
-              style: TextStyle(
-                color: Colors.orange,
-                fontSize: 30.0,
-              ),
-            ),
-            FloatingActionButton(
-              child: Icon(Icons.arrow_back_rounded),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            )
-          ],
-        ),
+        child: Text("Settings Page"),
+      ),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("HomePage"),
+      ),
+      body: Center(
+        child: Text("Welcome to Home Page"),
       ),
     );
   }

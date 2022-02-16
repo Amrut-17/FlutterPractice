@@ -1,58 +1,52 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dev_practice/screens/bottom_navBar.dart';
+import 'package:flutter_dev_practice/screens/create_drawer.dart';
 import 'package:flutter_dev_practice/screens/sample_pages.dart';
 
 void main() {
   runApp(
-    HomeScreen(),
+    MainApp(),
   );
 }
 
-class HomeScreen extends StatelessWidget {
+class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Page Navigation",
-      home: NavigationTest(),
+      title: "Drawer Application",
+      home: DrawerApplication(),
+      theme: ThemeData(
+        primarySwatch: Colors.amber,
+      ),
     );
   }
 }
 
-class NavigationTest extends StatefulWidget {
+class DrawerApplication extends StatefulWidget {
   @override
-  _NavigationTestState createState() => _NavigationTestState();
+  _DrawerApplicationState createState() => _DrawerApplicationState();
 }
 
-class _NavigationTestState extends State<NavigationTest> {
+class _DrawerApplicationState extends State<DrawerApplication> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.amber.shade500,
         title: Text(
-          "Navigation Test",
+          "Drawer Navigation",
           style: TextStyle(
             fontStyle: FontStyle.italic,
             fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
       ),
       body: Center(
-        child: RaisedButton(
-          child: Text(
-            "Click Here",
-            style: TextStyle(
-                color: Colors.blue,
-                fontWeight: FontWeight.bold,
-                fontStyle: FontStyle.italic,
-                fontSize: 20.0),
-          ),
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => AppPages()));
-          },
-        ),
+        child: Text("First Page"),
       ),
+      drawer: DrawerFunctions(),
+      bottomNavigationBar: BottomNavigation(),
     );
   }
 }

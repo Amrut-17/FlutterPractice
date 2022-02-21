@@ -33,6 +33,13 @@ class HomeScreen extends StatelessWidget {
             IconButton(
               onPressed: () {},
               icon: Icon(Icons.notifications_active),
+            ),
+            PopupMenuButton(
+              itemBuilder: (context) => [
+                PopupMenuItem(child: Text("Item 1")),
+                PopupMenuItem(child: Text("Item 2")),
+                PopupMenuItem(child: Text("Item 3")),
+              ],
             )
           ],
         ),

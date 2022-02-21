@@ -1,52 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dev_practice/screens/bottom_navBar.dart';
-import 'package:flutter_dev_practice/screens/create_drawer.dart';
-import 'package:flutter_dev_practice/screens/sample_pages.dart';
 
 void main() {
   runApp(
-    MainApp(),
+    HomeScreen(),
   );
 }
 
-class MainApp extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Drawer Application",
-      home: DrawerApplication(),
-      theme: ThemeData(
-        primarySwatch: Colors.amber,
-      ),
-    );
-  }
-}
-
-class DrawerApplication extends StatefulWidget {
-  @override
-  _DrawerApplicationState createState() => _DrawerApplicationState();
-}
-
-class _DrawerApplicationState extends State<DrawerApplication> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Drawer Navigation",
-          style: TextStyle(
-            fontStyle: FontStyle.italic,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+      title: "AppBar Tut",
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.amber,
+          title: Text(
+            "AppBar Tutorial",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.italic,
+            ),
           ),
+          leading: IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.menu),
+          ),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.search),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.notifications_active),
+            )
+          ],
         ),
       ),
-      body: Center(
-        child: Text("First Page"),
-      ),
-      drawer: DrawerFunctions(),
-      bottomNavigationBar: BottomNavigation(),
     );
   }
 }

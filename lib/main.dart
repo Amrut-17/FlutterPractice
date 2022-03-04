@@ -1,42 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dev_practice/pages/welcome_page.dart';
 
 void main() {
   runApp(
-    HomeScreen(),
+    MyApp(),
   );
 }
 
-class HomeScreen extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "AppBar Tut",
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.amber,
-          title: Text(
-            "AppBar Tutorial",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontStyle: FontStyle.italic,
-            ),
-          ),
-          leading: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.menu),
-          ),
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.search),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.notifications_active),
-            )
-          ],
-        ),
+      title: "Flutter Practice",
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: WelcomePage(),
     );
   }
 }

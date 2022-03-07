@@ -32,9 +32,7 @@ class _WelcomePageState extends State<WelcomePage> {
             height: double.maxFinite,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(
-                  "assets/images/" + images[index],
-                ),
+                image: AssetImage("assets/images/" + images[index]),
                 fit: BoxFit.cover,
               ),
             ),

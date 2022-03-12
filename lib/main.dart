@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dev_practice/pages/detail_page.dart';
-import 'package:flutter_dev_practice/pages/navpages/main_page.dart';
-import 'package:flutter_dev_practice/pages/welcome_page.dart';
+import 'package:flutter_dev_practice/screens/homePage.dart';
 
 void main() {
   runApp(
@@ -15,12 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Flutter Practice",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: DetailPage(),
+      home: HomePage(),
     );
   }
 }

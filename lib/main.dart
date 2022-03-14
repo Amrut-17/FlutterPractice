@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dev_practice/screens/homePage.dart';
+import 'package:flutter_dev_practice/screens/onBording_page.dart';
 
 void main() {
   runApp(
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: OnBoardingPage(),
     );
   }
 }
